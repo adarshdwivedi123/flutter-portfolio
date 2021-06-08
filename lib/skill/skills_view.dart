@@ -6,6 +6,10 @@ import 'package:flutterudemyportfolio/component/mobile_view_builder.dart';
 import 'package:flutterudemyportfolio/skill/OutlineSkillContainer.dart';
 
 class SkillsView extends StatelessWidget {
+  const SkillsView({
+    Key key,
+  }) : super(key: key);
+
   static const title = 'Skills';
   // const SkillsView({ Key? key }) : super(key: key);
 

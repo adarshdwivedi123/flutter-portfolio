@@ -1,5 +1,7 @@
-// import 'package:flutter/material.dart';
-// import 'dart:html' as html;
+import 'package:flutter/material.dart';
+import 'dart:html' as html;
+
+import 'package:flutterudemyportfolio/component/elevation_on_hover.dart';
 
 // extension HoverExtension on Widget {
 //   static final appContainer =
@@ -12,3 +14,9 @@
 //     );
 //   }
 // }
+extension HoverExtension on Widget {
+  Widget get moveUpOnHover {
+    //return ElevateOnHover(child: this);
+    return ElevatorOnHover(child: this);
+  }
+}

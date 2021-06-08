@@ -5,6 +5,9 @@ import 'package:flutterudemyportfolio/component/mobile_view_builder.dart';
 import 'package:flutterudemyportfolio/experience/experience_container.dart';
 
 class ExperienceView extends StatelessWidget {
+  const ExperienceView({
+    Key key,
+  }) : super(key: key);
   @override
   static const title = 'Experience';
   Widget build(BuildContext context) {
@@ -48,6 +51,9 @@ class ExperienceDesktopView extends StatelessWidget {
               )),
           ],
         ),
+        SizedBox(
+          height: 70,
+        )
       ],
     );
   }

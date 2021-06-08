@@ -1,5 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutterudemyportfolio/utils/hover_extension.dart';
 
 class HeaderBody extends StatelessWidget {
   final bool isMobile;
@@ -42,7 +44,8 @@ class HeaderBody extends StatelessWidget {
             ),
           ),
           color: Colors.redAccent,
-          onPressed: () {},
+          onPressed: () => launch(
+              'mailto:adarsh.alld100@gmail.com?subject=<subject>&body=<body>'),
           child: Padding(
             padding: EdgeInsets.symmetric(
               vertical: isMobile ?? false ? 10 : 17,
@@ -56,7 +59,7 @@ class HeaderBody extends StatelessWidget {
               ),
             ),
           ),
-        ),
+        ).moveUpOnHover,
       ],
     );
   }

@@ -30,6 +30,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   responsive_builder:
   auto_size_text: ^2.1.0  
+  webfeed: ^0.7.0
+  http: ^0.12.2
+  url_launcher: ^6.0.6
+  after_layout: ^1.1.0
 
 dev_dependencies:
   flutter_test:
