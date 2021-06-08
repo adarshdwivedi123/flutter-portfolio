@@ -5,10 +5,10 @@ class MobileDesktopViewBuilder extends StatelessWidget {
   const MobileDesktopViewBuilder({
     Key key,
     this.showMobile,
-    this.mobileView,
-    this.desktopView,
-    List<Widget> children,
-    String titleText,
+    @required this.mobileView,
+    @required this.desktopView,
+    //   List<Widget> children,
+    // String titleText,
   }) : super(key: key);
 
   final bool showMobile;

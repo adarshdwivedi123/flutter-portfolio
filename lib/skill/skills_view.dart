@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutterudemyportfolio/component/desktop_view_builder.dart';
 import 'package:flutterudemyportfolio/component/mobile_desktop_view_builder.dart';
+import 'package:flutterudemyportfolio/component/mobile_view_builder.dart';
 
 import 'package:flutterudemyportfolio/skill/OutlineSkillContainer.dart';
 
 class SkillsView extends StatelessWidget {
-  static const Title = 'Skills';
+  static const title = 'Skills';
   // const SkillsView({ Key? key }) : super(key: key);
 
   @override
@@ -27,7 +28,7 @@ class SkillsDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DesktopViewBuilder(
-      titleText: SkillsView.Title,
+      titleText: SkillsView.title,
       children: [
         SizedBox(
           height: 20,
@@ -60,16 +61,18 @@ class SkillsMobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MobileDesktopViewBuilder(titleText: 'Skills', children: [
-      for (var index = 0; index < skills.length; index++)
-        OutlineSkillContainer(
-          index: index,
-          isMobile: true,
-        ),
-      SizedBox(
-        height: 10,
-      ),
-    ]);
+    return MobileViewBuilder(
+      titleText: SkillsView.title,
+      children: [
+        for (var index = 0; index < skills.length; index++) ...[
+          OutlineSkillContainer(
+            index: index,
+            isMobile: true,
+          ),
+          SizedBox(height: 10)
+        ]
+      ],
+    );
   }
 }
 
