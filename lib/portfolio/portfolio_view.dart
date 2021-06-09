@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterudemyportfolio/drawer/drawer_view.dart';
+import 'package:flutterudemyportfolio/footer/footer_view.dart';
 import 'package:flutterudemyportfolio/header/header_view.dart';
 import 'package:flutterudemyportfolio/portfolio/back_to_top_button.dart';
 
@@ -58,22 +59,21 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
       ],
       child: Scaffold(
         endDrawer: Drawerview(),
-        body: SingleChildScrollView(
-          controller: scrollController,
-          child: Column(
-            children: [
-              NavigationBarView(),
-              HeaderView(),
-              ProjectView(key: projectKey),
-              SkillsView(key: skillsKey),
-              ExperienceView(key: experienceKey),
-              BlogView(key: blogKey),
-              Container(
-                height: height,
-                width: width,
-                color: Colors.blue,
-              ),
-            ],
+        body: SizedBox(
+          width: width,
+          child: SingleChildScrollView(
+            controller: scrollController,
+            child: Column(
+              children: [
+                NavigationBarView(),
+                HeaderView(),
+                ProjectView(key: projectKey),
+                SkillsView(key: skillsKey),
+                ExperienceView(key: experienceKey),
+                FooterView(),
+                BlogView(key: blogKey),
+              ],
+            ),
           ),
         ),
         floatingActionButton: BackToTopBottom(),

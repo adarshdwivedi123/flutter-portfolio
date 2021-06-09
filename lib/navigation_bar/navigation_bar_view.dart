@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutterudemyportfolio/component/mobile_desktop_view_builder.dart';
-import 'package:flutterudemyportfolio/main.dart';
 import 'package:flutterudemyportfolio/portfolio/portfolio_view.dart';
 import 'package:provider/provider.dart';
 import '../constant.dart';
