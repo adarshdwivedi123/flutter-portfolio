@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutterudemyportfolio/component/mobile_desktop_view_builder.dart';
-
+import 'package:flutterudemyportfolio/main.dart';
+import 'package:flutterudemyportfolio/portfolio/portfolio_view.dart';
+import 'package:provider/provider.dart';
 import '../constant.dart';
 
 class NavigationBarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final onPressed = () => print('click');
+    // final onPressed = () => print('click');
     return MobileDesktopViewBuilder(
       mobileView: NavigationMobileView(),
-      desktopView: NavigationDesktopView(onPressed: onPressed),
+      desktopView: NavigationDesktopView(),
     );
   }
 }
@@ -17,13 +19,12 @@ class NavigationBarView extends StatelessWidget {
 class NavigationDesktopView extends StatelessWidget {
   const NavigationDesktopView({
     Key key,
-    @required this.onPressed,
   }) : super(key: key);
-
-  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
+    final navigationItems = context.watch<List<NavigationItem>>();
+    final scrollController = context.watch<ScrollController>();
     return Container(
       height: 100,
       width: kInitWidth,
@@ -34,8 +35,18 @@ class NavigationDesktopView extends StatelessWidget {
         children: [
           Image.asset('images/header_nav_logo.png'),
           Spacer(),
-          for (var item in kNavigationItems)
-            NavigationBarItem(onPressed: onPressed, text: Text(item.text)),
+          for (var item in navigationItems)
+            NavigationBarItem(
+                onPressed: () {
+                  scrollController.animateTo(
+                    item.position,
+                    duration: Duration(milliseconds: 700),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                text: Text(
+                  item.text,
+                )),
         ],
       ),
     );
@@ -68,19 +79,6 @@ class NavigationMobileView extends StatelessWidget {
   }
 }
 //we crearte a class to give the name for header
-
-class NavigationItem {
-  final String text;
-
-  NavigationItem(this.text);
-}
-
-final kNavigationItems = [
-  NavigationItem('Projects'),
-  NavigationItem('Skills'),
-  NavigationItem('About Me'),
-  NavigationItem('Blog'),
-];
 
 class NavigationBarItem extends StatelessWidget {
   //final isSmall = MediaQuery.of(context).size.width < 650;
