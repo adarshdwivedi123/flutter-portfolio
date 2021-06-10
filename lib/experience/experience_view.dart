@@ -9,7 +9,7 @@ class ExperienceView extends StatelessWidget {
     Key key,
   }) : super(key: key);
   @override
-  static const title = 'Experience';
+  static const title = 'Experience  && Certification';
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(
       desktopView: ExperienceDesktopView(),

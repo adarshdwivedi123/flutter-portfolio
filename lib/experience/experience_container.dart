@@ -78,30 +78,27 @@ final experiences = [
     ],
   ),
   ExperienceInfo(
-    company: 'Android developer Intern (Start Up)',
-    timeline: 'June 2020 -sep 2020 (3 months)',
+    company: '0nline Training',
+    timeline: ' April 2020 – May 2020 | 2 month | CSI IEEE',
     description: [
-      '- Working on existing appp',
-      '- modify the UI Part Of the App',
-      '- Work in a team of 2 developers',
+      '- Learn Android With Firebase.'
+          '- Learn How To use differnt Layout and How to use dialog box.'
+          '- With The Help of firebase login and authenticate the user and debugging the app.'
     ],
   ),
   ExperienceInfo(
-    company: 'Android developer Intern (Start Up)',
-    timeline: 'June 2020 -sep 2020 (3 months)',
+    company: 'INDUSTRIAL EXPOSURE',
+    timeline: 'NETCAMP PRIVATE LIMITED | 20 days | Android With Core Java',
     description: [
-      '- Working on existing appp',
-      '- modify the UI Part Of the App',
-      '- Work in a team of 2 developers',
+      '-In this Training I Learn Android With Core Java give the basic idea of android.'
+          '- what are the diffculties facing anyone during making a android app'
     ],
   ),
   ExperienceInfo(
-    company: 'Android developer Intern (Start Up)',
-    timeline: 'June 2020 -sep 2020 (3 months)',
+    company: 'Udemy Courses',
+    timeline: 'Hitesh Choudray',
     description: [
-      '- Working on existing appp',
-      '- modify the UI Part Of the App',
-      '- Work in a team of 2 developers',
+      '- Learn  Flutter And Dart',
     ],
   ),
 ];

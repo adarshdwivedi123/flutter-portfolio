@@ -18,19 +18,34 @@ class ProjectItem {
 
 final kProjectItems = [
   ProjectItem(
-      image: 'images/music.png',
-      title: 'music app',
-      description: 'music app that play and pause the song  in this app  ',
-      technologies: ['Flutter', 'Firebase']),
+      image: 'images/corona.jpeg',
+      title: 'corona app',
+      description:
+          'covid-19 app to know the exact data about coronavirus in any'
+          'specific-country how many death recover and active cases in India from  the coronavirus ',
+      technologies: ['Java', 'Android', 'API', 'Xml']),
   ProjectItem(
       image: 'images/music.png',
       title: 'music app',
-      description: 'music app that play and pause the song  in this app  ',
-      technologies: ['Flutter', 'Firebase']),
+      description:
+          ' Music Player App at  a run time read the song from the phone '
+          'display the song in the form list on click on particular song then it move to '
+          'second screen and then song is play and pause',
+      technologies: ['Java', 'Android']),
   ProjectItem(
-      image: 'images/music.png',
-      title: 'music app',
-      description: 'music app that play and pause the song  in this app  ',
+      image: 'images/shyari.jpeg',
+      title: 'shyari app',
+      description:
+          ' display the  Diffrent type of shayri in the from listview fetching the shayri '
+          ' from the firebase  and storing the shayri in Firebase '
+          'use Material Design to  Decorate My App',
+      technologies: ['Java', 'Firebase']),
+  ProjectItem(
+      image: 'images/portfolio.png',
+      title: 'Portfolio app',
+      description:
+          ' Portfolio App  To ShowCase My skills , Experience and Project with the help of '
+          ' This App  i am creating using Flutter  and Dart this App can run in both mobile and in web',
       technologies: ['Flutter', 'Firebase'])
 ];
 
@@ -38,7 +53,7 @@ class ProjectView extends StatelessWidget {
   const ProjectView({
     Key key,
   }) : super(key: key);
-  static const Title = 'Skills';
+  static const Title = 'Project';
   @override
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(

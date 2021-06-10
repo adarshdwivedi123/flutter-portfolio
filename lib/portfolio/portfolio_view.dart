@@ -6,7 +6,6 @@ import 'package:flutterudemyportfolio/portfolio/back_to_top_button.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:flutterudemyportfolio/blog/blog_view.dart';
 import 'package:flutterudemyportfolio/experience/experience_view.dart';
 import 'package:flutterudemyportfolio/navigation_bar/navigation_bar_view.dart';
 import 'package:flutterudemyportfolio/project/project_view.dart';
@@ -36,16 +35,16 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
         NavigationItem('Projects', key: projectKey),
         NavigationItem('Skills', key: skillsKey),
         NavigationItem('Experiences', key: experienceKey),
-        NavigationItem('Blog', key: blogKey),
+        //NavigationItem('Blog', key: blogKey),
       ];
     });
 
-    final projectPosition = _getPosition(projectKey);
+    // final projectPosition = _getPosition(projectKey);
   }
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
+    // final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
     return MultiProvider(
@@ -71,7 +70,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                 SkillsView(key: skillsKey),
                 ExperienceView(key: experienceKey),
                 FooterView(),
-                BlogView(key: blogKey),
+                //BlogView(key: blogKey),
               ],
             ),
           ),

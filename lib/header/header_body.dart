@@ -30,7 +30,9 @@ class HeaderBody extends StatelessWidget {
           height: isMobile ?? false ? 20 : 37,
         ),
         AutoSizeText(
-          'I have 2  years of experience in mobile  development in building  beautiful ',
+          'Hi I Am Adarsh Dwivedi '
+          ' I have 3 month of  experience in  Android With Core Java,'
+          '  And I have Basic Knowlwdge of flutter and Dart I Am very Passionate About Android App Development',
           style: TextStyle(fontSize: 24),
           maxLines: 3,
         ),

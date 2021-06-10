@@ -95,7 +95,7 @@ class FooterMobileView extends StatelessWidget {
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               hoverColor: Colors.transparent,
-              onTap: () => launch('https://github.com'),
+              onTap: () => launch('https://github.com/adarshdwivedi123'),
             ),
           ],
         ));
@@ -110,6 +110,10 @@ class SociaInfo {
 }
 
 final socials = [
+  SociaInfo(
+    icon: FaIcon(FontAwesomeIcons.github),
+    url: 'https://github.com/adarshdwivedi123',
+  ),
   SociaInfo(
     icon: FaIcon(FontAwesomeIcons.facebook),
     url: 'https://www.facebook.com',
